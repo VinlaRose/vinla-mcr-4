@@ -1,8 +1,9 @@
 .post-card {
     max-width: 600px;
-    border: 1px solid #ccc;
+    
     padding: 20px;
     margin: 20px auto;
+    background-color: white;
   }
   .post-section{
     display: flex;

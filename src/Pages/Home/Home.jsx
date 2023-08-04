@@ -10,16 +10,18 @@ export const Home = () => {
 
     const {state} = useContext(DataContext);
     console.log(state);
+    const [mainHead, setMainHead] = useState(" ")
     const user = state.filteredData
 
    
-  
+  let headingMain
     const handleOptionChange = (event) => {
+
       const selectedOption = event.target.value;
       if (selectedOption === 'likes') {
-        
+       setMainHead("Popular Posts")
       } else if (selectedOption === 'date') {
-        
+        setMainHead("Latest Posts")
       }
     };
   
@@ -49,6 +51,7 @@ export const Home = () => {
             
            </div>
            <div className="main">
+            <h2>{mainHead}</h2>
            
             {
   state.filteredData.posts.map(item => (
