@@ -1,0 +1,60 @@
+.homeBody{
+    display: flex;
+}
+.left{
+    flex: 2;
+    margin-left: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.left-bottom{
+  margin-bottom: 30px;
+}
+.main{
+    flex: 5;
+}
+.right{
+    flex: 2;
+    margin: 20px;
+
+}
+
+.navigate{
+  display: flex;
+  margin: 15px;
+}
+
+.sorting-component {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  label {
+    margin-right: 8px;
+  }
+  
+  #sort-select {
+    width: 90%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background-color: #dddada;
+    cursor: pointer;
+  }
+  
+  #sort-select option {
+    background-color: #fff;
+  }
+  
+  #sort-select:hover {
+    border-color: #999;
+  }
+  
+  #sort-select:focus {
+    outline: none;
+    border-color: #d7dbd7;
+    box-shadow: 0 0 5px rgba(226, 230, 226, 0.6);
+  }
+  
