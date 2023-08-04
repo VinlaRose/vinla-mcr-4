@@ -18,6 +18,7 @@ const PostCard = ({
   createdAt,
   comments,
   isBookmarked,
+  showComments,
 }) => {
 
   const EquilateralTriangle = ({ color }) => {
@@ -108,11 +109,7 @@ bookmark
       </div>
      
       
-     
-     
-     
-     
-      <div className="comments-section">
+     {showComments && <div className="comments-section">
         {comments.map((comment) => (
           <div key={comment.commentId} className="comment">
             <div className="user-info">
@@ -128,7 +125,11 @@ bookmark
             <div className="comment-date">{comment.createdAt}</div>
           </div>
         ))}
-      </div>
+      </div> }
+     
+     
+     
+      
     </div>
   );
 };

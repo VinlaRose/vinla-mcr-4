@@ -66,6 +66,7 @@ export const Home = () => {
       createdAt={item.createdAt}
       comments={item.comments}
       isBookmarked={item.isBookmarked}
+      showComments={false}
     />
   ))
 }

@@ -8,6 +8,7 @@ export const SinglePost = () => {
 const {postId} = useParams;
 
     const {state} = useContext(DataContext);
+    const user = state.filteredData
 
     const item = state.singlePostCurrent;
     console.log(item)
@@ -19,10 +20,27 @@ const {postId} = useParams;
     return (
         <div className="homeBody">
            <div className="left">
-            <div className="navigate">Home</div>
-            <div className="navigate">Explore</div>
-            <div className="navigate">Bookmarks</div>
-            <div className="navigate">Profile</div>
+            <div className="left-top">
+            <div className="navigate"><span class="material-symbols-outlined">home</span>
+            Home</div>
+            <div className="navigate"><span class="material-symbols-outlined">rocket</span>Explore</div>
+            <div className="navigate"><span class="material-symbols-outlined">bookmark</span>Bookmarks</div>
+            <div className="navigate"> <span class="material-symbols-outlined">account_circle</span>Profile</div>
+
+            </div>
+
+            <div className="left-bottom">
+            <div className="user-info">
+        <img src={user.picUrl} alt=" " className="user-pic" />
+        <div className="user-name">
+           <div className='username-style'>{user.name}</div>
+            <div className="post-date">@{user.username}</div>
+        
+        </div>
+        
+      </div>
+            </div>
+            
            </div>
            <div className="main">
            <PostCard
@@ -39,6 +57,7 @@ const {postId} = useParams;
       createdAt={item.createdAt}
       comments={item.comments}
       isBookmarked={item.isBookmarked}
+      showComments={true}
     />
            
 
